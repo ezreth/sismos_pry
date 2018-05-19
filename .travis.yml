@@ -4,4 +4,4 @@
   install:
     - pip3 install -r requirements.txt
   script:
-    - nosetests --rednose _test_ -v -d
+    - nosetests --rednose Test -v -d
