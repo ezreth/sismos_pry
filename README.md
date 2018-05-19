@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.com/ezreth/sismos_pry.svg?branch=master)](https://travis-ci.com/ezreth/sismos_pry)
