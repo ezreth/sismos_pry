@@ -2,7 +2,7 @@
 ### Modelado de Datos
 ### Quinta Promoción
 ### Integrantes:
-### Natalis Carvajal
+### Natalia Carvajal
 ### Karina Molina
 ### Diego López
 
