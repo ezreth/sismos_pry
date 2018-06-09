@@ -1,23 +1,21 @@
 import pandas as pd
-import numpy as nm
+#import numpy as nm
 def read_csv():
 
     print("*****Lectura Datos Seguros*****")
     print("*****Escenario 1******")
-    df = pd.read_csv('../Data/Segurodt.csv')
-    #df["PROVINCIA"] = df.PROVINCIA.astype('|S')
-    #df
-    #df = df.drop["COD",1]
-    #df = df.drop["IMPUESTO",1]
-    #df = df.drop["TAMANIO",1]
-    #df = df.drop["UTILIDADES",1]
+    df = pd.read_csv('../Data/Segurodt.csv')  #Lectura del archivo csv
+    df = df.drop(['COD', 'IMPUESTO', 'TAMANIO', 'UTILIDADES'], axis=1) # se eliminan las columnas que no intervienen en el escenario
+    #print(df)
+
+
     #print(df.dtypes)
     #a_set_group = df.groupby((df["ANIO"])).agg({'REGION','PROVINCIA', 'SECTOR'})
-    set_group = df.groupby(['REGION','SECTOR'])
+    set_group = df.groupby(['ANIO','REGION','SECTOR','PROVINCIA','INGRESOS']).sum() #se agrupa y se suma las variables
+    print(set_group) #se imprime la arupacion
+    
 
-    #print(set_group)
 
-    #print(a_set_group)
 
 if __name__ == "__main__":
     read_csv()
