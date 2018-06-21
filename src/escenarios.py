@@ -1,16 +1,28 @@
-import pandas as pd
-
 from read_csv import *
+from splitdata import *
 
-# import numpy as nm
-def crea_escenarios():
+def crea_escenarios(lista):
+
+    print('-Crea escenario' + lista[3] + '-')
 
     df = read_csv('../Data/Segurodt.csv')
-    e1 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA'],['COD', 'IMPUESTO', 'TAMANIO', 'UTILIDADES'],'INGRESOS']
 
-    df = df.drop(el[1], axis=1)
-    set_group = df.groupby((e1[0])).INGRESOS.sum()
-    print(set_group)
+
+
+    df = df.drop(lista[1], axis=1)
+
+    set_group = df.groupby(lista[0])[lista[2]].apply(lambda x: x.astype(int).sum())
+
+
+    training, test = get_train_test_inds(set_group,train_proportion=0.7)
+
+    orden = lista[3]
+
+
+    crea_csv(training,'etraining' + orden)
+    crea_csv(test, 'etest1' + orden)
+
+
 
 
 

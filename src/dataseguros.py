@@ -1,33 +1,58 @@
-import pandas as pd
-#import numpy as nm
+from escenarios import *
+
 def main():
 
-    print("*****Lectura Datos Seguros*****")
-    print("*****Escenario 1******")
-    df = pd.read_csv('../Data/Segurodt.csv')  #Lectura del archivo csv
+    print("-GENERACION DE ESCENARIOS-")
+    print("MODELADO DE DATOS")
+    print("PROYECTO: INFORMACION DE SEGUROS")
+    print("INTEGRANTES:")
+    print("NATALIA CARVAJAL")
+    print("KARINA MOLINA")
+    print("DIEGO LÓPEZ")
 
-    e1 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA'], ['COD', 'IMPUESTO', 'TAMANIO', 'UTILIDADES'], 'INGRESOS']
+    e1 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA'], ['COD', 'IMPUESTO', 'TAMANIO', 'UTILIDADES'], ["INGRESOS"], 1]
+    crea_escenarios(e1)
 
-    df = df.drop(e1[1], axis=1)
+    e2 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA'], ['COD', 'IMPUESTO', 'TAMANIO', 'INGRESOS'], ["UTILIDADES"], 2]
+    crea_escenarios(e2)
 
-    set_group = df.groupby((e1[0])).INGRESOS.sum()
-    #set_group = df.groupby(('ANIO', 'REGION', 'SECTOR', 'PROVINCIA')).suma.sum()
-    #set_group = df.groupby(('ANIO', 'REGION', 'SECTOR', 'PROVINCIA')).INGRESOS.sum()
-    print(set_group)
+    e3 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA'], ['COD', 'UTILIDADES', 'TAMANIO', 'INGRESOS'], ["IMPUESTO"], 3]
+    crea_escenarios(e3)
 
+    e4 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA'], ['COD', 'IMPUESTO', 'TAMANIO'], ["INGRESOS","UTILIDADES"], 4]
+    crea_escenarios(e4)
 
-    #df = df.drop(['COD', 'IMPUESTO', 'TAMANIO', 'UTILIDADES'], axis=1) # se eliminan las columnas que no intervienen en el escenario
-    #print(df)
+    e5 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA'], ['COD', 'UTILIDADES', 'TAMANIO'], ["INGRESOS","IMPUESTO"], 5]
+    crea_escenarios(e5)
 
+    e6 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA'], ['COD', 'TAMANIO', 'INGRESOS'], ["UTILIDADES","IMPUESTO"], 6]
+    crea_escenarios(e6)
 
-    #print(df.dtypes)
+    e7 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA'], ['COD', 'TAMANIO'], ["INGRESOS,""UTILIDADES", "IMPUESTO"], 7]
+    crea_escenarios(e7)
 
+    e8 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA','TAMANIO'], ['COD', 'IMPUESTO', 'UTILIDADES'], ["INGRESOS"], 8]
+    crea_escenarios(e8)
 
-    #df2 = df.groupby(('turno', 'CategoriaTM', 'CausaTM')).duracionTM.sum()
+    e9 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA', 'TAMANIO'], ['COD', 'IMPUESTO', 'INGRESOS'], ["UTILIDADES"], 9]
+    crea_escenarios(e9)
 
-    #print(set_group) #se imprime la arupacion
+    e10 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA', 'TAMANIO'], ['COD', 'UTILIDADES', 'INGRESOS'], ["IMPUESTO"], 10]
+    crea_escenarios(e10)
 
-    #set_group.to_csv('../Data/Escenario1.csv')
+    e11 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA', 'TAMANIO'], ['COD', 'IMPUESTO'], ["INGRESOS", "UTILIDADES"], 11]
+    crea_escenarios(e11)
+
+    e12 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA', 'TAMANIO'], ['COD', 'UTILIDADES'], ["INGRESOS", "IMPUESTO"], 12]
+    crea_escenarios(e12)
+
+    e13 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA', 'TAMANIO'], ['COD', 'INGRESOS'], ["UTILIDADES", "IMPUESTO"], 13]
+    crea_escenarios(e13)
+
+    e14 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA', 'TAMANIO'], ['COD'], ["INGRESOS,""UTILIDADES", "IMPUESTO"], 14]
+    crea_escenarios(e14)
+
+    print(-FIN-)
 
 
 
