@@ -3,9 +3,9 @@ from splitdata import *
 
 def crea_escenarios(lista):
 
-    print('-Crea escenario' + lista[3] + '-')
+    print('-Crea escenario ' + lista[3] + '-')
 
-    df = read_csv('../Data/Segurodt.csv')
+    df = read_csv('Segurodt')
 
 
 
@@ -14,13 +14,10 @@ def crea_escenarios(lista):
     set_group = df.groupby(lista[0])[lista[2]].apply(lambda x: x.astype(int).sum())
 
 
-    training, test = get_train_test_inds(set_group,train_proportion=0.7)
+    training, test = get_train_test_inds(set_group)
 
-    orden = lista[3]
-
-
-    crea_csv(training,'etraining' + orden)
-    crea_csv(test, 'etest1' + orden)
+    crea_csv(training,'etraining' + lista[3])
+    crea_csv(test, 'etest' + lista[3])
 
 
 

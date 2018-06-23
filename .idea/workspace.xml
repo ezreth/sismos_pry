@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/src/dataseguros.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataseguros.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/escenarios.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/escenarios.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/read_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/read_csv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/splitdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/splitdata.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dataseguros.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dataseguros.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dataseguros.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="49" column="24" lean-forward="true" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+            <state relative-caret-position="272">
+              <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -36,11 +37,20 @@
       <file leaf-file-name="escenarios.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/escenarios.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="204">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="splitdata.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/splitdata.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="12" selection-start-line="4" selection-end-line="9" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -70,10 +80,10 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/escenario2.py" />
         <option value="$PROJECT_DIR$/src/escenario3.py" />
-        <option value="$PROJECT_DIR$/src/splitdata.py" />
-        <option value="$PROJECT_DIR$/src/read_csv.py" />
         <option value="$PROJECT_DIR$/src/escenarios.py" />
         <option value="$PROJECT_DIR$/src/dataseguros.py" />
+        <option value="$PROJECT_DIR$/src/read_csv.py" />
+        <option value="$PROJECT_DIR$/src/splitdata.py" />
       </list>
     </option>
   </component>
@@ -95,6 +105,16 @@
             <path>
               <item name="sismos" type="b2602c69:ProjectViewProjectNode" />
               <item name="sismos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sismos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sismos" type="462c0819:PsiDirectoryNode" />
+              <item name="Data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sismos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sismos" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -190,7 +210,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25869894" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25869894" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="R Packages" order="4" />
       <window_info anchor="right" id="R Graphics" order="3" />
@@ -199,7 +219,7 @@
       <window_info anchor="bottom" id="Python Console" order="8" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.34158415" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49924356" visible="true" weight="0.30858085" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49924356" visible="true" weight="0.30858085" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -410,13 +430,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/splitdata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test/test_math.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -434,20 +447,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/dataseguros.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/escenarios.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dataseguros.py">
+    <entry file="file://$PROJECT_DIR$/src/splitdata.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="49" column="24" lean-forward="true" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+        <state relative-caret-position="102">
+          <caret line="6" column="12" selection-start-line="4" selection-end-line="9" selection-end-column="32" />
         </state>
       </provider>
     </entry>
