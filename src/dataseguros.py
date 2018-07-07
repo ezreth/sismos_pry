@@ -10,8 +10,9 @@ def main():
     print("KARINA MOLINA")
     print("DIEGO LÓPEZ")
 
-    e1 = [['ANIO', 'COD',  'SECTOR'], ['IMPUESTO', 'TAMANIO', 'UTILIDADES', 'REGION', 'PROVINCIA'], ["INGRESOS"], "1"]
-    crea_escenarios(e1,"","")
+    #una variable
+    e1 = [['ANIO', 'MES', 'COD', 'SECTOR'], ['UTILIDAD', 'TAMANIO', 'INGRESO', 'REGION', 'PROVINCIA'], ["IMPUESTO"], "1"]
+    #crea_escenarios(e1,"","")
 
     e2 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA'], ['COD', 'IMPUESTO', 'TAMANIO', 'INGRESOS'], ["UTILIDADES"], "2"]
     #crea_escenarios(e2,"","")
@@ -19,7 +20,8 @@ def main():
     e3 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA'], ['COD', 'UTILIDADES', 'TAMANIO', 'INGRESOS'], ["IMPUESTO"], "3"]
     #crea_escenarios(e3,"","")
 
-    e4 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA'], ['COD', 'IMPUESTO', 'TAMANIO'], ["INGRESOS","UTILIDADES"], "4"]
+    #dos variables
+    e4 = [['ANIO', 'MES', 'COD', 'SECTOR'], ['INGRESO', 'TAMANIO', 'REGION','PROVINCIA'], ["UTILIDAD","IMPUESTO"], "4"]
     #crea_escenarios(e4,"","")
 
     e5 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA'], ['COD', 'UTILIDADES', 'TAMANIO'], ["INGRESOS","IMPUESTO"], "5"]
@@ -49,8 +51,9 @@ def main():
     e13 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA', 'TAMANIO'], ['COD', 'INGRESOS'], ["UTILIDADES", "IMPUESTO"], "13"]
     #crea_escenarios(e13,"","")
 
-    e14 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA', 'TAMANIO'], ['COD'], ["INGRESOS","UTILIDADES", "IMPUESTO"], "14"]
-    #crea_escenarios(e14,"","")
+    #tres variables
+    e14 = [['ANIO', 'MES', 'COD', 'SECTOR'], ['REGION','PROVINCIA','TAMANIO'], ["INGRESO", "UTILIDAD", "IMPUESTO"], "14"]
+    crea_escenarios(e14,"","")
 
     print("-FIN-")
 
