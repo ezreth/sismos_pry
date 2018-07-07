@@ -39,9 +39,9 @@ def crea_escenarios(lista,filtro,valor):
 
     #esc = transpone(set_group,rango,lista[2])
 
-    #esc = scene2(set_group,rango,lista[2][0],lista[2][1])
+    #esc = transpone2(set_group,rango,lista[2][0],lista[2][1])
 
-    esc = scene3(set_group,rango,lista[2][0],lista[2][1],lista[2][2])
+    esc = transpone3(set_group,rango,lista[2][0],lista[2][1],lista[2][2])
 
     #print(esc)
 
@@ -74,30 +74,30 @@ def transpone(df,rango,variable):
         escenario.ix[escenario.index[i]] = temp2
     return escenario
 
-def scene2(data, steps, variable1,variable2):  #Build scenary with two variables
-    long = len(data.index)
-    scene = pd.DataFrame(index=data.index[steps:long], columns=range(0, 2*steps))
-    for i in range(0, long - steps):
-        temp = data.ix[data.index[i:i + steps], variable1].values
-        temp1=data.ix[data.index[i:i + steps], variable2].values
+def transpone2(df, rango, variable1,variable2):  #Build scenary with two variables
+    indice = len(df.index)
+    escenario = pd.DataFrame(index=df.index[rango:indice], columns=range(0, 2*rango))
+    for i in range(0, indice - rango):
+        temp = df.ix[df.index[i:i + rango], variable1].values
+        temp1 = df.ix[df.index[i:i + rango], variable2].values
         temp2 = np.ravel(np.column_stack((temp,temp1)))
         temp3 = np.transpose(temp2)
-        scene.ix[scene.index[i]] = temp3
-    scene.ix[scene.index[0:long - steps], 2 * steps] = data.ix[data.index[steps:long], variable2]
-    return scene
+        escenario.ix[escenario.index[i]] = temp3
+    escenario.ix[escenario.index[0:indice - rango], 2 * rango] = df.ix[df.index[rango:indice], variable2]
+    return escenario
 
-def scene3(data, steps, variable1, variable2,variable3):  #Build scenary with three variables
-    long = len(data.index)
-    scene = pd.DataFrame(index=data.index[steps:long], columns=range(0, 3 * steps))
-    for i in range(0, long - steps):
-        temp = data.ix[data.index[i:i + steps], variable1].values
-        temp2 = data.ix[data.index[i:i + steps], variable2].values
-        temp3=data.ix[data.index[i:i + steps], variable3].values
+def transpone3(df, rango, variable1, variable2,variable3):  #Build scenary with three variables
+    indice = len(df.index)
+    escenario = pd.DataFrame(index=df.index[rango:long], columns=range(0, 3 * rango))
+    for i in range(0, indice - rango):
+        temp = df.ix[df.index[i:i + rango], variable1].values
+        temp2 = df.ix[df.index[i:i + rango], variable2].values
+        temp3=df.ix[df.index[i:i + rango], variable3].values
         temp4 = np.ravel(np.column_stack((temp,temp2,temp3)))
         temp5 = np.transpose(temp4)
-        scene.ix[scene.index[i]] = temp5
-    scene.ix[scene.index[0:long - steps], 3 * steps] = data.ix[data.index[steps:long], variable3]
-    return scene
+        escenario.ix[escenario.index[i]] = temp5
+    escenario.ix[escenario.index[0:indice - rango], 3 * rango] = df.ix[df.index[rango:indice], variable3]
+    return escenario
 
 
 def renombracols(df,rango):
