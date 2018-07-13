@@ -10,50 +10,32 @@ def main():
     print("KARINA MOLINA")
     print("DIEGO LÓPEZ")
 
+    rango = 6
+    filtro = 'F'
+
     #una variable
-    e1 = [['ANIO', 'MES', 'COD', 'SECTOR'], ['UTILIDAD', 'TAMANIO', 'INGRESO', 'REGION', 'PROVINCIA'], ["IMPUESTO"], "1"]
-    #crea_escenarios(e1,"","")
+    e1 = [['ANIO', 'MES', 'COD', 'SECTOR'], ['UTILIDAD', 'TAMANIO', 'IMPUESTO', 'REGION', 'PROVINCIA'], ["INGRESO"], ['ANIO', 'MES']]
+    crea_escenarios(e1, rango, filtro)
 
-    e2 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA'], ['COD', 'IMPUESTO', 'TAMANIO', 'INGRESOS'], ["UTILIDADES"], "2"]
-    #crea_escenarios(e2,"","")
+    e2 =  [['ANIO', 'MES', 'COD', 'SECTOR'], ['INGRESO', 'TAMANIO', 'IMPUESTO', 'REGION', 'PROVINCIA'], ["UTILIDAD"], ['ANIO', 'MES']]
+    crea_escenarios(e2, rango, filtro)
 
-    e3 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA'], ['COD', 'UTILIDADES', 'TAMANIO', 'INGRESOS'], ["IMPUESTO"], "3"]
-    #crea_escenarios(e3,"","")
+    e3 = [['ANIO', 'MES', 'COD', 'SECTOR'], ['UTILIDAD', 'TAMANIO', 'INGRESO', 'REGION', 'PROVINCIA'], ["IMPUESTO"], ['ANIO', 'MES']]
+    crea_escenarios(e3, rango, filtro)
 
     #dos variables
-    e4 = [['ANIO', 'MES', 'COD', 'SECTOR'], ['INGRESO', 'TAMANIO', 'REGION','PROVINCIA'], ["UTILIDAD","IMPUESTO"], "4"]
-    #crea_escenarios(e4,"","")
+    e4 = [['ANIO', 'MES', 'COD', 'SECTOR'], ['IMPUESTO', 'TAMANIO', 'REGION','PROVINCIA'], ["INGRESO","UTILIDAD"], ['ANIO', 'MES']]
+    crea_escenarios(e4, rango, filtro)
 
-    e5 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA'], ['COD', 'UTILIDADES', 'TAMANIO'], ["INGRESOS","IMPUESTO"], "5"]
-    #crea_escenarios(e5,"","")
+    e5 = [['ANIO', 'MES', 'COD', 'SECTOR'], ['UTILIDAD', 'TAMANIO', 'REGION','PROVINCIA'], ["INGRESO","IMPUESTO"], ['ANIO', 'MES']]
+    crea_escenarios(e5, rango, filtro)
 
-    e6 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA'], ['COD', 'TAMANIO', 'INGRESOS'], ["UTILIDADES","IMPUESTO"], "6"]
-    #crea_escenarios(e6,"","")
-
-    e7 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA'], ['COD', 'TAMANIO'], ["INGRESOS","UTILIDADES", "IMPUESTO"], "7"]
-    #crea_escenarios(e7,"","")
-
-    e8 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA','TAMANIO'], ['COD', 'IMPUESTO', 'UTILIDADES'], ["INGRESOS"], "8"]
-    #crea_escenarios(e8,"","")
-
-    e9 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA', 'TAMANIO'], ['COD', 'IMPUESTO', 'INGRESOS'], ["UTILIDADES"], "9"]
-    #crea_escenarios(e9,"","")
-
-    e10 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA', 'TAMANIO'], ['COD', 'UTILIDADES', 'INGRESOS'], ["IMPUESTO"], "10"]
-    #crea_escenarios(e10,"","")
-
-    e11 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA', 'TAMANIO'], ['COD', 'IMPUESTO'], ["INGRESOS", "UTILIDADES"], "11"]
-    #crea_escenarios(e11,"","")
-
-    e12 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA', 'TAMANIO'], ['COD', 'UTILIDADES'], ["INGRESOS", "IMPUESTO"], "12"]
-    #crea_escenarios(e12,"","")
-
-    e13 = [['ANIO', 'REGION', 'SECTOR', 'PROVINCIA', 'TAMANIO'], ['COD', 'INGRESOS'], ["UTILIDADES", "IMPUESTO"], "13"]
-    #crea_escenarios(e13,"","")
+    e6 = [['ANIO', 'MES', 'COD', 'SECTOR'], ['INGRESO', 'TAMANIO', 'REGION','PROVINCIA'], ["UTILIDAD","IMPUESTO"], ['ANIO', 'MES']]
+    crea_escenarios(e6, rango, filtro)
 
     #tres variables
-    e14 = [['ANIO', 'MES', 'COD', 'SECTOR'], ['REGION','PROVINCIA','TAMANIO'], ["INGRESO", "UTILIDAD", "IMPUESTO"], "14"]
-    crea_escenarios(e14,"","")
+    e14 = [['ANIO', 'MES', 'COD', 'SECTOR'], ['REGION','PROVINCIA','TAMANIO'], ["INGRESO", "IMPUESTO", "UTILIDAD"],['ANIO', 'MES']]
+    crea_escenarios(e14, rango, filtro)
 
     print("-FIN-")
 
